@@ -14,7 +14,12 @@ function List({ list, setList, setMessage }) {
     if (newList.length === 0) {
       setMessage('No tasks added!');
     } else {
-      completeTask(clicked);
+      let length = newList.filter((task) => !task.completed).length;
+      let message = length + ' incomplete task';
+      if (length !== 1) {
+        message += 's';
+      }
+      setMessage(message);
     }
     setList(newList);
   };

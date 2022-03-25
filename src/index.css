@@ -1,10 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: lavender;
   display: flex;
   justify-content: center;
@@ -16,7 +12,7 @@ main {
   box-sizing: border-box;
   width: 350px;
   padding: 30px;
-  margin-top: 25%; /* fix this lol */
+  margin-top: 25%;
   border-radius: 30px;
   box-shadow: 0px 0px 10px #e2e2e2;
 }
@@ -47,13 +43,17 @@ button {
   cursor: pointer;
 }
 
+label,
+input[type='text'] {
+  font-size: 20px;
+}
+
 li div {
   display: flex;
   align-items: baseline;
 }
 
 li label {
-  font-size: 20px;
   margin-left: 5px;
   overflow-wrap: break-word;
   width: 250px;
@@ -108,7 +108,6 @@ input[type='text'] {
   border: none;
   border-bottom: 1px solid #3a3280;
   width: 165px;
-  font-size: 20px;
 }
 
 input[type='text']:focus {
