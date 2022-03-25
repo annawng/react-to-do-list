@@ -5,8 +5,112 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lavender;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: white;
+  box-sizing: border-box;
+  width: 350px;
+  padding: 30px;
+  margin-top: 25%; /* fix this lol */
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px #e2e2e2;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  color: #3a3280;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li div {
+  display: flex;
+  align-items: baseline;
+}
+
+li label {
+  font-size: 20px;
+  margin-left: 5px;
+  overflow-wrap: break-word;
+  width: 250px;
+  display: inline-block;
+}
+
+.delete {
+  color: #cacaca;
+  cursor: default;
+  margin-left: 10px;
+}
+
+.form {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.form button {
+  color: white;
+  background-color: #3a3280;
+  border: none;
+  padding: 10px;
+  width: 75px;
+}
+
+main > button {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  padding: 15px;
+  color: #3a3280;
+  background-color: white;
+  border: 1px solid #3a3280;
+  width: 290px;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+input[type='text'] {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #3a3280;
+  width: 165px;
+  font-size: 20px;
+}
+
+input[type='text']:focus {
+  outline: none;
 }

@@ -32,14 +32,17 @@ function App() {
     <main>
       <section className='container'>
         <h1>Tasks</h1>
-        <List tasks={list} setMessage={setMessage} />
         <p>{message}</p>
+        <List list={list} setList={setList} setMessage={setMessage} />
       </section>
       <section className='form'>
-        <input type='text' id='text-field' />
-        <input type='submit' onClick={addTask} />
+        <p>Add a task</p>
+        <div>
+          <input type='text' id='text-field' />
+          <button onClick={addTask}>Submit</button>
+        </div>
       </section>
-      <button onClick={clearAll}>Clear All</button>
+      <button onClick={clearAll}>Clear all</button>
     </main>
   );
 }
