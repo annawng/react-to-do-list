@@ -30,17 +30,17 @@ function List({ list, setList, setMessage }) {
         const { id, text, completed } = task;
         return (
           <li key={id}>
-            <div>
+            <label>
+              {text}
               <input
-                id={id}
                 type='checkbox'
                 defaultChecked={completed}
                 onClick={() => {
                   completeTask(task);
                 }}
               />
-              <label htmlFor={id}>{text}</label>
-            </div>
+              <span className='checkmark'></span>
+            </label>
             <span
               className='delete'
               onClick={() => {

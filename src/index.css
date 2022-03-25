@@ -40,6 +40,22 @@ p {
 button {
   box-sizing: border-box;
   border-radius: 5px;
+}
+
+label {
+  display: inline-block;
+  align-items: baseline;
+  position: relative;
+  padding-top: 1px;
+  padding-left: 40px;
+  margin: 5px 0px 15px 5px;
+  overflow-wrap: break-word;
+  width: 225px;
+}
+
+label,
+button,
+.delete {
   cursor: pointer;
 }
 
@@ -48,21 +64,9 @@ input[type='text'] {
   font-size: 20px;
 }
 
-li div {
-  display: flex;
-  align-items: baseline;
-}
-
-li label {
-  margin-left: 5px;
-  overflow-wrap: break-word;
-  width: 250px;
-  display: inline-block;
-}
-
 .delete {
-  color: #cacaca;
-  cursor: default;
+  color: #9e9e9e;
+  margin-top: 8px;
   margin-left: 10px;
 }
 
@@ -70,6 +74,16 @@ li label {
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 5px;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #4f4f4f;
+  border-radius: 100%;
 }
 
 .form div {
@@ -112,4 +126,35 @@ input[type='text'] {
 
 input[type='text']:focus {
   outline: none;
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+label input:checked ~ .checkmark {
+  border: 1px solid #9e9e9e;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 11px;
+  top: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid #9e9e9e;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
